@@ -1,4 +1,5 @@
 // Write your helper functions here!
+//const formSubmission =
 require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
@@ -74,11 +75,11 @@ async function myFetch() {
     let planetsReturned;
 
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-        if(response.status >= 400) {
-            throw new Error ("Bad response");
-        } else {
+        // if(response.status >= 400) {
+        //     throw new Error ("Bad response");
+        // } else {
             return response.json();
-        }
+        // }
     });
 
     return planetsReturned;
