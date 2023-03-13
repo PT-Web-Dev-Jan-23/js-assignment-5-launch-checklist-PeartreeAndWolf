@@ -1,5 +1,5 @@
 // Write your helper functions here!
-//const formSubmission =
+
 require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
@@ -19,7 +19,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
 function validateInput(testInput) {
     let numberInput = Number(testInput);
-    if(testInput === "") {
+    if(testInput === "" || testInput === null) {
         return "Empty";
     } else if (isNaN(numberInput)){
         return "Not a Number";
@@ -43,6 +43,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         list.style.visibility = "visible";
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
+    }
         let launchStatus = document.getElementById("launchStatus");
 
         if (fuelLevel < 10000 && cargoLevel <= 10000) {
@@ -67,7 +68,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             launchStatus.style.color = "rgb(65, 159, 106";
         }
 
-    }
+    
 
 
 };
