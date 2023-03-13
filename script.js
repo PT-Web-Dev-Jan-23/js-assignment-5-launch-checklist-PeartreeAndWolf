@@ -1,5 +1,4 @@
-// const { addDestinationInfo, formSubmission } = 
-require("./scriptHelper");
+const { addDestinationInfo, formSubmission } = require("./scriptHelper");
 
 // Write your JavaScript code here!
 window.addEventListener("load", function() {
@@ -28,7 +27,7 @@ window.addEventListener("load", function() {
             let copilot = copilotInput.value;
 
             let fuelInput = document.querySelector("input[name=fuelLevel]");
-            let fuelLevel = Number(cargoInput.value);
+            let fuelLevel = Number(fuelInput.value);
 
             let cargoInput = document.querySelector("input[name=cargoMass]");
             let cargoLevel = Number(cargoInput.value);
