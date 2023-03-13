@@ -68,7 +68,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             launchStatus.style.color = "rgb(65, 159, 106";
         
 
-    }
+        }
 
 
 };
